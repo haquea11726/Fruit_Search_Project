@@ -1,0 +1,60 @@
+body {
+  background: linear-gradient(to right, #db9f1e, #faf89b);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-container {
+  width: 300px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #070707;
+  border-top: none;
+  background: transparent;
+  z-index: 10;
+  display: none;
+}
+
+.suggestions.has-suggestions {
+  display: block;
+}
+
+.suggestions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions ul li:hover,
+.suggestions ul li.highlight {
+  background-color: #e36d12
+}
